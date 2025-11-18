@@ -1,21 +1,21 @@
-import { FlexBox, Heading, Slide, Text, Notes } from 'spectacle';
+import { FlexBox, Heading, Slide } from 'spectacle';
+import { Avatar, ToggleTheme } from '../components';
 
 const Intro = () => {
   return (
-    <Slide backgroundColor='primary'>
+    <Slide backgroundColor='background'>
+      <ToggleTheme />
       <FlexBox height='100%' flexDirection='column' justifyContent='center'>
-        <Heading color='tertiary' fontSize='h2'>
+        <Heading color='primary' fontSize='h2' fontWeight='normal'>
           Design Tokens e Style Dictionary: Como gerar temas para sua
           plataforma?
         </Heading>
-        <Text color='secondary' fontSize='2em' marginTop='2em'>
-          Subtítulo ou Descrição
-        </Text>
-        <Text color='quaternary' fontSize='1.5em' marginTop='2em'>
-          Seu Nome • Data
-        </Text>
+        <Avatar
+          image='https://media.licdn.com/dms/image/v2/D4D03AQG_oIqYE9ML5w/profile-displayphoto-scale_200_200/B4DZqEjafdIMAY-/0/1763160469053?e=1764806400&v=beta&t=vOovBBxrCghYFcQWxor0H2bsycdz7WM3ty2A4YDHELM'
+          name='Rogério Moura'
+          role='Frontend Developer'
+        />
       </FlexBox>
-      <Notes>Notas do apresentador para o slide de título.</Notes>
     </Slide>
   );
 };

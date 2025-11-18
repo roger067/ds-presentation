@@ -1,12 +1,25 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Monigue font */
+@font-face {
+  font-family: 'Monigue';
+  src: url('./assets/Monigue/Monigue.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease;
 }
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
@@ -17,25 +30,21 @@ body {
   height: 100vh;
 }
 
-/* Estilos personalizados para a apresentação */
 .spectacle-deck {
   width: 100%;
   height: 100%;
 }
 
-/* Melhorar a aparência dos code blocks */
 pre {
   border-radius: 10px !important;
   padding: 1.5em !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Animações suaves */
 .spectacle-slide {
   transition: all 0.3s ease-in-out;
 }
 
-/* Melhorar a aparência das listas */
 ul {
   list-style-position: outside;
   padding-left: 1.5em;
@@ -46,7 +55,6 @@ li {
   line-height: 1.6;
 }
 
-/* Estilos para citações */
 blockquote {
   font-style: italic;
   position: relative;
@@ -62,17 +70,73 @@ blockquote::before {
   opacity: 0.3;
 }
 
-/* Melhorar a legibilidade do texto */
 p {
   line-height: 1.6;
 }
 
-/* Estilos para o modo apresentador */
 .spectacle-presenter-mode {
   background: #1e293b;
 }
 
-/* Responsividade */
+.logo {
+  width: 3em;
+  height: 3em;
+}
+
+.logo path {
+  fill: var(--icon-default-primary);
+}
+
+.toggle-theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.avatar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.avatar-info > div {
+  margin: 0;
+  padding: 0;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--modal-1);
+}
+
+.rounded-xl {
+  border-radius: 48px;
+}
+
+pre {
+  max-height: 420px;
+}
+
+.demo-image {
+  max-height: 100%;
+  object-fit: contain;
+  height: 516px;
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 14px;

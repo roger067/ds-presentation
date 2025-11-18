@@ -1,21 +1,17 @@
-import { Text, FlexBox, Box, Progress } from 'spectacle';
+import { FlexBox } from 'spectacle';
+import Spiral from '../assets/spiral';
 
-const Template = () => (
-  <FlexBox
-    justifyContent='space-between'
-    position='absolute'
-    bottom={0}
-    width={1}
-  >
-    <Box padding='0 1em'>
-      <Text fontSize='1em' color='quaternary'>
-        Minha Apresentação
-      </Text>
-    </Box>
-    <Box padding='0 1em'>
-      <Progress color='secondary' />
-    </Box>
-  </FlexBox>
-);
+const Template = () => {
+  return (
+    <FlexBox
+      justifyContent='space-between'
+      position='absolute'
+      bottom='0px'
+      width={1}
+    >
+      <Spiral />
+    </FlexBox>
+  );
+};
 
 export default Template;

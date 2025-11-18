@@ -4,33 +4,52 @@ import {
   UnorderedList,
   ListItem,
   Appear,
-  Notes,
+  Box,
+  FlexBox,
+  Image,
 } from 'spectacle';
+import { ToggleTheme } from '../components';
+
+import atomicDesignImage from '../assets/images/atomic-design-product.jpg';
 
 const AtomicDesign = () => {
   return (
-    <Slide backgroundColor='tertiary'>
-      <Heading color='primary' fontSize='h2' marginBottom='2em'>
-        Agenda
+    <Slide backgroundColor='background'>
+      <ToggleTheme />
+      <Heading
+        color='primary'
+        fontSize='h2'
+        fontWeight='normal'
+        marginBottom='2em'
+      >
+        Atomic Design
       </Heading>
-      <UnorderedList color='primary' fontSize='1.5em'>
-        <Appear>
-          <ListItem>Introdução ao Tema</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Conceitos Principais</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Exemplos Práticos</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Demonstração</ListItem>
-        </Appear>
-        <Appear>
-          <ListItem>Conclusão e Próximos Passos</ListItem>
-        </Appear>
-      </UnorderedList>
-      <Notes>Este slide apresenta a estrutura da apresentação.</Notes>
+      <FlexBox flexDirection='row' justifyContent='space-between'>
+        <Box width='35%'>
+          <UnorderedList color='secondary' fontSize='1.5em'>
+            <Appear>
+              <ListItem>Átomos</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Moléculas</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Organismos</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Templates</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Páginas</ListItem>
+            </Appear>
+          </UnorderedList>
+        </Box>
+        <Box width='55%'>
+          <Appear>
+            <Image src={atomicDesignImage} className='responsive-image' />
+          </Appear>
+        </Box>
+      </FlexBox>
     </Slide>
   );
 };

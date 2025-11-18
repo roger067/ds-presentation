@@ -1,4 +1,5 @@
 import { Deck } from 'spectacle';
+
 import { Template } from './components';
 import {
   Intro,
@@ -12,21 +13,20 @@ import {
   Conclusion,
   ClosingSlide,
 } from './slides';
-import { useTheme } from './hooks/useTheme';
 
+import { THEME } from './theme';
 import '@getpingback/design-tokens/css/light.css';
 import '@getpingback/design-tokens/css/dark.css';
 
 function App() {
-  const { theme } = useTheme();
   return (
-    <Deck theme={theme} template={Template}>
+    <Deck theme={THEME} template={Template}>
       <Intro />
       <AtomicDesign />
-      <Tokens />
-      <Semantic />
       <TokenStudio />
       <StyleDictionary />
+      <Semantic />
+      <Tokens />
       <SdFormatters />
       <Demonstration />
       <Conclusion />

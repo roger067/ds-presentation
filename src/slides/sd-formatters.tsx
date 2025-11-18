@@ -1,30 +1,59 @@
-import { Slide, Heading, FlexBox, Box, Text, Notes } from 'spectacle';
+import {
+  Slide,
+  Heading,
+  Image,
+  UnorderedList,
+  ListItem,
+  FlexBox,
+  Box,
+  Appear,
+} from 'spectacle';
+
+import drawedFlowImage from '../assets/images/drawed-flow.webp';
+import { ToggleTheme } from '../components';
 
 const SdFormatters = () => {
   return (
-    <Slide backgroundColor='tertiary'>
-      <Heading color='primary' fontSize='h2' marginBottom='1em'>
-        Visualização
+    <Slide backgroundColor='background'>
+      <ToggleTheme />
+      <Heading
+        color='primary'
+        fontSize='h2'
+        fontWeight='normal'
+        marginBottom='1em'
+      >
+        Fluxo do Style Dictionary
       </Heading>
-      <FlexBox height='60%' justifyContent='center' alignItems='center'>
-        <Box
-          backgroundColor='primary'
-          width='60%'
-          height='100%'
-          borderRadius='20px'
-          display='flex'
-          alignItems='center'
-          justifyContent='center'
-        >
-          <Text color='tertiary' fontSize='2em'>
-            📊 Seu Gráfico ou Imagem Aqui
-          </Text>
+      <FlexBox
+        flexDirection='row'
+        justifyContent='space-between'
+        marginTop='2em'
+      >
+        <Box width='25%'>
+          <UnorderedList color='primary' fontSize='1.2em'>
+            <Appear>
+              <ListItem>Tokens</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Matchers</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Transformers</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Formatters</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>Actions</ListItem>
+            </Appear>
+          </UnorderedList>
+        </Box>
+        <Box width='65%'>
+          <Appear>
+            <Image src={drawedFlowImage} className='responsive-image' />
+          </Appear>
         </Box>
       </FlexBox>
-      <Text color='quaternary' fontSize='1.2em' marginTop='1em'>
-        Substitua este box por uma imagem usando o componente Image
-      </Text>
-      <Notes>Slide para inserir visualizações, gráficos ou imagens.</Notes>
     </Slide>
   );
 };
