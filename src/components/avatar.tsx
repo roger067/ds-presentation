@@ -13,7 +13,7 @@ export default function Avatar({
     <div className='avatar'>
       <Image size='3em' src={image} alt={name} />
       <div className='avatar-info'>
-        <Text color='secondary' fontSize='1.2em'>
+        <Text color='secondary' fontWeight='600' fontSize='1.2em'>
           {name}
         </Text>
         <Text color='tertiary' fontSize='1em'>

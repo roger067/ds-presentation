@@ -137,6 +137,41 @@ pre {
   height: 516px;
 }
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 16px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border-default);
+}
+
+.profile-card .avatar {
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75em;
+  border-top: 1px solid var(--border-default);
+  padding-top: 1em;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials svg {
+  width: 14px;
+  height: 14px;
+}
+
+.socials svg path {
+  fill: var(--icon-default-tertiary);
+}
+
 @media (max-width: 768px) {
   body {
     font-size: 14px;
