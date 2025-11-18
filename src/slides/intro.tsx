@@ -4,8 +4,9 @@ const Intro = () => {
   return (
     <Slide backgroundColor='primary'>
       <FlexBox height='100%' flexDirection='column' justifyContent='center'>
-        <Heading color='tertiary' fontSize='h1'>
-          Título da Apresentação
+        <Heading color='tertiary' fontSize='h2'>
+          Design Tokens e Style Dictionary: Como gerar temas para sua
+          plataforma?
         </Heading>
         <Text color='secondary' fontSize='2em' marginTop='2em'>
           Subtítulo ou Descrição

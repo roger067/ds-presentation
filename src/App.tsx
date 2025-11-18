@@ -12,9 +12,13 @@ import {
   Conclusion,
   ClosingSlide,
 } from './slides';
-import { theme } from './theme';
+import { useTheme } from './hooks/useTheme';
+
+import '@getpingback/design-tokens/css/light.css';
+import '@getpingback/design-tokens/css/dark.css';
 
 function App() {
+  const { theme } = useTheme();
   return (
     <Deck theme={theme} template={Template}>
       <Intro />
